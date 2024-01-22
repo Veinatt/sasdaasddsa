@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css?_v=20231208225415" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20231208225415" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.18/fullpage.min.css?_v=20231208225415" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20231208225415" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20231208225415" />
+    <title>Kreative Dreamz</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="sub-header">
+                <div class="sh-address">
+                    Московская область, Москва
+                </div>
+                <a href="tel:+79801821101" class="sh-tel">
+                    +7 980 182 11 01
+                </a>
+                <a href="mailto:kreativedreamz1@gmail.com" class="sh-mail">
+                    kreativedreamz1@gmail.com
+                </a>
+                <button type="button" class="main-btn sh-btn" data-bs-whatever="default" data-bs-toggle="modal" data-bs-target="#Modal">Заказать
+                    звонок</button>
+            </div>
+            <div class="main-header">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="logo">
+                </div>
+                <a href="#sec_4">Цены</a>
+                <a href="#sec_5">О компании</a>
+                <a href="#sec_3">Наши мероприятия</a>
+                <a href="#sec_8">Этапы работы</a>
+            </div>
+            <div class="mobile-header">
+                <div class="logo">
+                    <img src="img/logo-mob.svg" alt="logo">
+                </div>
+                <button type="button" class="main-btn sh-btn" data-bs-whatever="default" data-bs-toggle="modal" data-bs-target="#Modal">Заказать
+                    звонок</button>
+                <div class="burger-wrapper">
+                    <div class="burger">
+                        <span class="sp"></span>
+                    </div>
+                </div>
+                <div class="links-cont">
+                    <div class="links">
+                        <a href="#sec_4">Цены</a>
+                        <a href="#sec_5">О компании</a>
+                        <a href="#sec_3">Наши мероприятия</a>
+                        <a href="#sec_8">Этапы работы</a>
+                    </div>
+                    <div class="bottom-cont">
+                        <a href="tel:+79801821101" class="sh-tel">
+                            +7 980 182 11 01
+                        </a>
+                        <a href="mailto:kreativedreamz1@gmail.com" class="sh-mail">
+                            kreativedreamz1@gmail.com
+                        </a>
+                        <div class="sh-address">
+                            Московская область, Москва
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down">
+            <div class="modal-content">
+                <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="main-cont">
+                    <div class="title">
+                        Оставьте заявку прямо сейчас
+                    </div>
+                    <div class="sub-title">
+                        и получите <span>скидку -10.000р</span>
+                    </div>
+                    <form id="form" action="form-handler.php" onsubmit="form_submit(event)" method="POST" data-bs-whatever="">
+                        <div class="in-row">
+                            <div class="in-item">
+                                <div class="in-label">Имя</div>
+                                <input type="name" placeholder="Иван" id="FormInputName" name="FormInputName">
+                            </div>
+                            <div class="in-item">
+                                <div class="in-label">Номер телефона</div>
+                                <input type="tel" placeholder="+7 ___-__-__" id="FormInputTel" name="FormInputTel">
+                            </div>
+                        </div>
+                        <div class="in-row2">
+                            <button type="submit" class="main-btn mdl-btn">Оставить заявку</button>
+                            <div class="timer-cont">
+                                <div class="in-label">
+                                    До конца акции осталось:
+                                </div>
+                                <div class="timer">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="success-cont">
+                    <div class="title">
+                        Спасибо за вашу заявку!
+                    </div>
+                    <div class="text">
+                        Мы свяжемся с вами в ближайшее время!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="sec_1">
+        <video autoplay muted loop pip="false">
+            <source src="files/video.mp4" type="video/mp4">
+        </video>
+        <div class="shadow"></div>
+        <div class="container" data-aos="fade-down">
+            <h1 class="main-title">Организация мероприятий под ключ</h1>
+            <div class="sec_1-cont">
+                <div class="text">
+                    Оставьте заявку и получите бесплатный расчет мероприятия вашей мечты
+                </div>
+                <button type="button" class="main-btn mdl-btn" data-bs-whatever="default" data-bs-toggle="modal" data-bs-target="#Modal">Оставить заявку</button>
+            </div>
+        </div>
+    </section>
+    <section id="sec_2">
+        <picture><source srcset="img/ell-1.webp" type="image/webp"><img src="img/ell-1.png" alt="" class="ell ell-1"></picture>
+        <div class="container">
+            <div class="sec_2-cont">
+                <img src="img/sec-2-1.svg" alt="">
+                <div class="title">
+                    Подбираем площадку
+                </div>
+                <div class="text">
+                    Предлагаем более 150 вариантов разных площадок на выбор
+                </div>
+            </div>
+            <div class="sec_2-cont">
+                <img src="img/sec-2-2.svg" alt="">
+                <div class="title">
+                    Берем ответственность за организацию мероприятия под ключ
+                </div>
+                <div class="text">
+                    Более 300 довольных клиентов 92% из которых повторные заказы
+                </div>
+            </div>
+            <div class="sec_2-cont">
+                <img src="img/sec-2-3.svg" alt="">
+                <div class="title">
+                    Оформляем зал
+                </div>
+                <div class="text">
+                    Большая команда декораторов, которые воплотят ваши мечты в реальность
+                </div>
+            </div>
+            <div class="sec_2-cont">
+                <img src="img/sec-2-4.svg" alt="">
+                <div class="title">
+                    Подбираем развлекательную часть мероприятия
+                </div>
+                <div class="text">
+                    Создадим уникальный сценарий вашего мероприятия исходя из ваших пожеланий
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec_3" data-aos="fade-up">
+        <picture><source srcset="img/ell-2.webp" type="image/webp"><img src="img/ell-2.png" alt="" class="ell ell-2"></picture>
+        <div class="container">
+            <h1 class="head-title">За год работы, мы организовали <br> 
+                <span>более 300 мероприятий в Москве, <br>Санкт-Петербурге и Сочи</span>
+            </h1>
+            <div class="sec_3-cont">
+                <div class="video-cont">
+                    <button class="play-video" type="button"></button>
+                    <video pip="false">
+                        <source src="files/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-cont">
+                    <button class="play-video" type="button"></button>
+                    <video pip="false">
+                        <source src="files/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-cont">
+                    <button class="play-video" type="button"></button>
+                    <video pip="false">
+                        <source src="files/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-cont">
+                    <button class="play-video" type="button"></button>
+                    <video pip="false">
+                        <source src="files/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-cont">
+                    <button class="play-video" type="button"></button>
+                    <video pip="false">
+                        <source src="files/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-cont">
+                    <button class="play-video" type="button"></button>
+                    <video pip="false">
+                        <source src="files/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <button type="button" class="more-videos">Показать ещё</button>
+        </div>
+    </section>
+    <section id="sec_4">
+        <picture><source srcset="img/ell-3.webp" type="image/webp"><img src="img/ell-3.png" alt="" class="ell ell-3"></picture>
+        <div class="container" data-aos="fade-down">
+            <div class="sub-title">Наши услуги</div>
+            <h1 class="head-title">Организуем любое мероприятие</h1>
+            <div class="desc-title">Выберите то, что вам нужно!</div>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'tab1')" id="defaultOpen">Конференция</button>
+                <button class="tablinks" onclick="openTab(event, 'tab2')">Презентация</button>
+                <button class="tablinks" onclick="openTab(event, 'tab3')">Аренда площадки</button>
+                <button class="tablinks" onclick="openTab(event, 'tab4')">Свадьба</button>
+                <button class="tablinks" onclick="openTab(event, 'tab5')">День рождения</button>
+                <button class="tablinks" onclick="openTab(event, 'tab6')">Корпоратив</button>
+            </div>
+
+            <div id="tab1" class="tabcontent">
+                <div class="tab-card">
+                    <div class="title">Конференция</div>
+                    <div class="desc">Бизнес форум / Деловая встреча / Научная конференция</div>
+                    <div class="points-cont">
+                        <div class="point">
+                            <div class="p-title">Поиск и аренда площадки</div>
+                            <div class="line"></div>
+                            <div class="p-desc">по запросу</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Разработка сценария</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 7.500₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Спикер</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 100.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Оформление площадки</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 45.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Фотограф</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Видеооператор</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 35.500₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кофе-брейк</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 350₽/чел</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Обед</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 1.250₽/чел </div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Печать и дизайн материалов</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 9.500₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Звуковое оборудование</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Оборудование для презентации <br>
+                                (экран, проектор, флипчарт)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Логистика мероприятия</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 10.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Транспортные расходы</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 6.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Пресс-волы, ролл-апы и т.д.</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 7.000₽</div>
+                        </div>
+                    </div>
+                    <div class="bot-cont">
+                        <button type="button" class="main-btn mdl-btn" data-bs-whatever="conf" data-bs-toggle="modal" data-bs-target="#Modal">Заказать мероприятие</button>
+                        <div class="total-cont">
+                            <div>Итого:</div>
+                            <div class="price">от 300.000₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-video-cont">
+                    <div class="video-cont">
+                        <button class="play-video" type="button"></button>
+                        <video pip="false">
+                            <source src="files/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-desc">
+                        Cтоимость каждого мероприятия рассчитывается индивидуально в зависимости от требований
+                        и пожеланий клиента. Обращайтесь к нашему менеджеру за более точным расчетом. Звоните нам по
+                        тел.
+                        <a href="tel:+79801821101">+7 (980) 182-11-01</a> или пишите на нашу почту
+                        <a href="mailto:kreativedreamz1@gmail.com">kreativedreamz1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tabcontent">
+                <div class="tab-card">
+                    <div class="title">Презентация</div>
+                    <div class="desc">Бизнес форум / Деловая встреча / Научная конференция</div>
+                    <div class="points-cont">
+                        <div class="point">
+                            <div class="p-title">Площадка</div>
+                            <div class="line"></div>
+                            <div class="p-desc">по запросу</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Оформление площадки,<br> аренда сцены</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 50.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Оформление</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 50.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Фотограф</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (банкет)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 3.000₽/чел </div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (фуршет)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 2.500₽/чел </div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (барбекю)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 2.000₽/чел</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Печать и дизайн материалов</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 30.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Звуковое оборудование</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 50.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Световое оборудование</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 90.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Синхронный перевод</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 60.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Логистика мероприятия</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 10.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Транспортные расходы</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 5.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Пресс-волы, ролл-апы и т.д. </div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 10.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Оборудование<br>(проекторы, экран, флипчарт)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Хостесс</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 7.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Режиссура</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 10.000₽</div>
+                        </div>
+                    </div>
+                    <div class="bot-cont">
+                        <button type="button" class="main-btn mdl-btn" data-bs-whatever="pres" data-bs-toggle="modal" data-bs-target="#Modal">Заказать мероприятие</button>
+                        <div class="total-cont">
+                            <div>Итого:</div>
+                            <div class="price">от 100.000₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-video-cont">
+                    <div class="video-cont">
+                        <button class="play-video" type="button"></button>
+                        <video pip="false">
+                            <source src="files/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-desc">
+                        Cтоимость каждого мероприятия рассчитывается индивидуально в зависимости от требований
+                        и пожеланий клиента. Обращайтесь к нашему менеджеру за более точным расчетом.Звоните нам по тел.
+                        <a href="tel:+79801821101">+7 (980) 182-11-01</a> или пишите на нашу почту
+                        <a href="mailto:kreativedreamz1@gmail.com">kreativedreamz1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="tabcontent">
+                <div class="tab-card">
+                    <div class="title">Аренда площадки</div>
+                    <div class="desc">Спортивная арена / Концертный холл / Выставочный зал</div>
+                    <div class="points-cont">
+                        <div class="point">
+                            <div class="p-title">Оформление площадки</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Ведущий</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 7.500₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Ведущий (звёздный)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 700.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">DJ</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 30.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Активности на Welcome зону</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 40.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Артисты (кавер группа)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 100.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Артисты (различного жанра)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 35 000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Обед</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 1.250₽/чел </div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Фотограф</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 25.500₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Видеооператор</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 35.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Аниматоры</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 6.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (банкет)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 5.000₽/чел</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (фуршет)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 3.500₽/чел</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (барбекю)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 2.500₽/чел</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Реквизит на мероприятие</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Звуковое оборудование для DJ</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Звуковое оборудование (концертное)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 80.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Световое оборудование (концертное)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 90.000₽ </div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Логистика мероприятия
+                            </div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 80.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Транспортные расходы</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Фейерверк</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 100.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Флористика</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 10.000₽</div>
+                        </div>
+                    </div>
+                    <div class="bot-cont">
+                        <button type="button" class="main-btn mdl-btn" data-bs-whatever="rent" data-bs-toggle="modal" data-bs-target="#Modal">Заказать мероприятие</button>
+                        <div class="total-cont">
+                            <div>Итого:</div>
+                            <div class="price">от 300.000₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-video-cont">
+                    <div class="video-cont">
+                        <button class="play-video" type="button"></button>
+                        <video pip="false">
+                            <source src="files/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-desc">
+                        Cтоимость каждого мероприятия рассчитывается индивидуально в зависимости от требований
+                        и пожеланий клиента. Обращайтесь к нашему менеджеру за более точным расчетом.Звоните нам по тел.
+                        <a href="tel:+79801821101">+7 (980) 182-11-01</a> или пишите на нашу почту
+                        <a href="mailto:kreativedreamz1@gmail.com">kreativedreamz1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab4" class="tabcontent">
+                <div class="tab-card">
+                    <div class="title">Свадьба</div>
+                    <div class="desc">Описание какие могут быть свадьбы / И еще</div>
+                    <div class="points-cont">
+                        <div class="point">
+                            <div class="p-title">Площадка</div>
+                            <div class="line"></div>
+                            <div class="p-desc">по запросу</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Формирование сценария</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 7.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Оформление</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 50.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Фотограф</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Видеограф</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 45.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кавер группа</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 80.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Организация</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 50.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 5.000₽/чел </div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Звуковое оборудование</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽
+                            </div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Световое оборудование</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Активности на welcome зону</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                    </div>
+                    <div class="bot-cont">
+                        <button type="button" class="main-btn mdl-btn" data-bs-whatever="wedd" data-bs-toggle="modal" data-bs-target="#Modal">Заказать мероприятие</button>
+                        <div class="total-cont">
+                            <div>Итого:</div>
+                            <div class="price">от 300.000₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-video-cont">
+                    <div class="video-cont">
+                        <button class="play-video" type="button"></button>
+                        <video pip="false">
+                            <source src="files/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-desc">
+                        Cтоимость каждого мероприятия рассчитывается индивидуально в зависимости от требований
+                        и пожеланий клиента. Обращайтесь к нашему менеджеру за более точным расчетом.Звоните нам по тел.
+                        <a href="tel:+79801821101">+7 (980) 182-11-01</a> или пишите на нашу почту
+                        <a href="mailto:kreativedreamz1@gmail.com">kreativedreamz1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab5" class="tabcontent">
+                <div class="tab-card">
+                    <div class="title">День рождения</div>
+                    <div class="desc">День рождения / Еще что то</div>
+                    <div class="points-cont">
+                        <div class="point">
+                            <div class="p-title">Поиск и аренда площадки</div>
+                            <div class="line"></div>
+                            <div class="p-desc">по запросу</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Формирование сценария</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 7.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Оформление</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 50.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Ведущий</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 60.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Фотограф</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Видеограф</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 45.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кавер группа</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 80.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Организация</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 35.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 2.500₽/чел </div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Звуковое оборудование</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Световое оборудование</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Активности на welcome зону</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                    </div>
+                    <div class="bot-cont">
+                        <button type="button" class="main-btn mdl-btn" data-bs-whatever="dr" data-bs-toggle="modal" data-bs-target="#Modal">Заказать мероприятие</button>
+                        <div class="total-cont">
+                            <div>Итого:</div>
+                            <div class="price">от 150.000₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-video-cont">
+                    <div class="video-cont">
+                        <button class="play-video" type="button"></button>
+                        <video pip="false">
+                            <source src="files/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-desc">
+                        Cтоимость каждого мероприятия рассчитывается индивидуально в зависимости от требований
+                        и пожеланий клиента. Обращайтесь к нашему менеджеру за более точным расчетом.Звоните нам по тел.
+                        <a href="tel:+79801821101">+7 (980) 182-11-01</a> или пишите на нашу почту
+                        <a href="mailto:kreativedreamz1@gmail.com">kreativedreamz1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab6" class="tabcontent">
+                <div class="tab-card">
+                    <div class="title">Корпоратив</div>
+                    <div class="desc">Юбилей компании / Премии / Спортивный корпоратив </div>
+                    <div class="points-cont">
+                        <div class="point">
+                            <div class="p-title">Площадка</div>
+                            <div class="line"></div>
+                            <div class="p-desc">по запросу</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Оформление площадки</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Ведущий</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 40.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Ведущий (звездный)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 500.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">DJ</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 20.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Активности на Welcome зону</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 40.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Артисты (кавер группа)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 100.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Артисты (различного жанра)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 35.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Фотограф</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 10.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Видеооператор</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 35.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Аниматоры</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 6.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (банкет)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 3.000₽/чел</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (фуршет)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 2.500₽/чел</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Кейтеринг (барбекю)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 2.000₽/чел</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Реквизит на мероприятие</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Звуковое оборудование для DJ</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Звуковое оборудование (концертное)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 80.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Световое оборудование (концертное)</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 95.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Разработка и написание сценария</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 15.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Логистика мероприятия</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 10.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Транспортные расходы</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 10.000₽</div>
+                        </div>
+                        <div class="point">
+                            <div class="p-title">Фейерверк</div>
+                            <div class="line"></div>
+                            <div class="p-desc">от 100.000₽</div>
+                        </div>
+                    </div>
+                    <div class="bot-cont">
+                        <button type="button" class="main-btn mdl-btn" data-bs-whatever="corp" data-bs-toggle="modal" data-bs-target="#Modal">Заказать мероприятие</button>
+                        <div class="total-cont">
+                            <div>Итого:</div>
+                            <div class="price">от 280.000₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-video-cont">
+                    <div class="video-cont">
+                        <button class="play-video" type="button"></button>
+                        <video pip="false">
+                            <source src="files/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-desc">
+                        Cтоимость каждого мероприятия рассчитывается индивидуально в зависимости от требований
+                        и пожеланий клиента. Обращайтесь к нашему менеджеру за более точным расчетом.Звоните нам по тел.
+                        <a href="tel:+79801821101">+7 (980) 182-11-01</a> или пишите на нашу почту
+                        <a href="mailto:kreativedreamz1@gmail.com">kreativedreamz1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec_5">
+        <div class="container">
+            <div class="sub-title">О нас</div>
+            <h1 class="head-title">Мы - ивент агентство
+                “KreativeDreamz” в лице основателя -
+                Коняева Дениса Андреевича
+            </h1>
+            <div class="blocks-cont">
+                <div class="block-cont" data-aos="zoom-in">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2972_2111)">
+                            <path
+                                d="M21.6841 7.2631H14.8907L16.2501 3.18729C16.4947 2.4513 16.3712 1.63541 15.9172 1.00594C15.4633 0.376471 14.7273 0 13.9514 0H12C11.6405 0 11.3003 0.159788 11.0691 0.435786L5.37969 7.2631H2.31587C0.98067 7.2631 -0.105164 8.34894 -0.105164 9.68414V20.5788C-0.105164 21.914 0.98067 22.9998 2.31587 22.9998H18.4242C18.9168 22.9982 19.3972 22.8471 19.8021 22.5665C20.2069 22.286 20.517 21.8892 20.6915 21.4286L24.0289 12.5301C24.0796 12.3941 24.1054 12.2502 24.1052 12.1052V9.68414C24.1052 8.34894 23.0193 7.2631 21.6841 7.2631ZM2.31587 9.68414H4.7369V20.5788H2.31587V9.68414ZM21.6841 11.8861L18.4242 20.5788H7.15794V8.91183L12.5665 2.42103H13.9538L12.063 8.08988C12.0016 8.27184 11.9844 8.46581 12.013 8.65571C12.0416 8.84561 12.115 9.02597 12.2272 9.18182C12.3394 9.33768 12.4871 9.46454 12.6581 9.5519C12.8291 9.63926 13.0185 9.68459 13.2105 9.68414H21.6841V11.8861Z"
+                                fill="#F0F0F0" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2972_2111">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <div class="title">Гарантируем качество</div>
+                    <div class="text">С более чем 3-летним опытом организации мероприятий, мы гордо представляем себя
+                        в качестве ваших профессиональных услуг.
+                        За это время мы успели организовать более 400 мероприятий в Москве, Санкт-Петербурге и Сочи.
+                    </div>
+                </div>
+                <div class="block-cont" data-aos="zoom-in">
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.7 5.72317C20.02 5.72317 18.4333 6.3765 17.3017 7.50817L9.1 14.7882C8.35333 15.5348 7.36167 15.9432 6.3 15.9432C4.11833 15.9432 2.33333 14.1815 2.33333 11.9998C2.33333 9.81817 4.11833 8.0565 6.3 8.0565C7.36167 8.0565 8.35333 8.46484 9.14667 9.25817L10.465 10.4248L12.25 8.86151L10.7567 7.5665C10.1724 6.98006 9.47777 6.5152 8.71282 6.19881C7.94787 5.88242 7.1278 5.72076 6.3 5.72317C2.82333 5.72317 0 8.5465 0 11.9998C0 15.4532 2.82333 18.2765 6.3 18.2765C7.98 18.2765 9.56667 17.6232 10.6983 16.4915L18.9 9.2115C19.6467 8.46484 20.6383 8.0565 21.7 8.0565C23.8817 8.0565 25.6667 9.81817 25.6667 11.9998C25.6667 14.1815 23.8817 15.9432 21.7 15.9432C20.65 15.9432 19.6467 15.5348 18.8533 14.7415L17.5 13.5632L15.75 15.1265L17.2433 16.4332C17.8291 17.0167 18.5244 17.4788 19.2891 17.7932C20.0539 18.1075 20.8732 18.2678 21.7 18.2648C25.1767 18.2648 28 15.4532 28 11.9998C28 8.49984 25.1767 5.72317 21.7 5.72317Z"
+                            fill="#F0F0F0" />
+                    </svg>
+
+                    <div class="title">Организуем мероприятие любой сложности</div>
+                    <div class="text">Не важно, насколько сложное мероприятие
+                        вы хотите организовать. Своими профессиональными навыками и вниманием к деталям, мы возьмем
+                        на себя всю ответственность и сделаем все возможное, чтобы ваше мероприятие стало великолепным и
+                        неповторимым.
+                    </div>
+                </div>
+                <div class="block-cont" data-aos="zoom-in">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.2017 8.44546C24.5522 7.09495 23.9364 5.51756 23.2017 4.75047L19.9605 1.50925C18.5992 0.158746 17.0326 0.774577 16.2655 1.50925L14.4288 3.35675H11.6305C9.57776 3.35675 8.38931 4.43716 7.78428 5.67962L2.98728 10.4766V14.7983L2.22019 15.5545C0.869683 16.9158 1.48551 18.4824 2.22019 19.2495L5.46141 22.4907C6.04483 23.0742 6.67147 23.2902 7.26569 23.2902C8.03278 23.2902 8.73504 22.9121 9.1564 22.4907L12.0735 19.5628H15.9522C17.7888 19.5628 18.718 18.4176 19.0529 17.294C20.2738 16.9699 20.9436 16.0407 21.2137 15.1332C22.8884 14.701 23.515 13.1128 23.515 12V8.75878H22.8776L23.2017 8.44546ZM21.3542 12C21.3542 12.4862 21.1489 13.0804 20.2738 13.0804H19.1934V14.1608C19.1934 14.647 18.9881 15.2412 18.113 15.2412H17.0326V16.3216C17.0326 16.8078 16.8273 17.402 15.9522 17.402H11.1876L7.64383 20.9458C7.30891 21.2591 7.11443 21.0754 6.99559 20.9566L3.76517 17.737C3.45185 17.402 3.63552 17.2076 3.75437 17.0887L5.14809 15.6842V11.3626L7.30891 9.20175V10.9196C7.30891 12.2269 8.17323 14.1608 10.5501 14.1608C12.927 14.1608 13.7913 12.2269 13.7913 10.9196H21.3542V12ZM21.6675 6.91129L19.8308 8.75878H11.6305V10.9196C11.6305 11.4058 11.4253 12 10.5501 12C9.675 12 9.46972 11.4058 9.46972 10.9196V7.67837C9.46972 7.18139 9.65339 5.51756 11.6305 5.51756H15.3147L17.778 3.05423C18.113 2.74092 18.3074 2.92459 18.4263 3.04343L21.6567 6.26304C21.97 6.59797 21.7864 6.79244 21.6675 6.91129Z"
+                            fill="#F0F0F0" />
+                    </svg>
+
+                    <div class="title">Помогаем не только с организацией</div>
+                    <div class="text">Помимо самой организации, мы также предоставляем все необходимое для вашего
+                        мероприятия: от выбора идеальной локации и оформления до подбора развлекательных номеров или
+                        диджея для создания атмосферы праздника. Все, что нужно для успеха вашего мероприятия, мы готовы
+                        предоставить.
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="block-cont" data-aos="zoom-in">
+                    <picture><source srcset="img/sec-5-1.webp" type="image/webp"><img src="img/sec-5-1.png" alt=""></picture>
+                    <div class="title">Ваше мероприятие проходит в Москве?</div>
+                    <div class="text">Мы знаем каждый уголок этого удивительного города
+                        и поможем вам создать неповторимую атмосферу, которая останется в сердцах ваших гостей надолго.
+                    </div>
+                </div>
+                <div class="block-cont" data-aos="zoom-in">
+                    <picture><source srcset="img/sec-5-2.webp" type="image/webp"><img src="img/sec-5-2.png" alt=""></picture>
+                    <div class="title">Необходимо организовать мероприятие в Сочи?</div>
+                    <div class="text">Море, пляжи и красивейшие виды встретят ваших гостей в этом уникальном курортном
+                        городе. Мы возьмем
+                        на себя все заботы и сделаем ваше событие незабываемо солнечным и радостным.
+                    </div>
+                </div>
+                <div class="block-cont" data-aos="zoom-in">
+                    <picture><source srcset="img/sec-5-3.webp" type="image/webp"><img src="img/sec-5-3.png" alt=""></picture>
+                    <div class="title">У вас мероприятие в Санкт-Петербурге?</div>
+                    <div class="text">Благодаря своему опыту и знаниям о самых уютных
+                        и знаковых местах, мы с радостью поможем вам организовать мероприятие, которое заслуживает
+                        особого внимания.
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="star-cont">
+                <svg width="285" height="285" viewBox="0 0 285 285" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M157.63 126.505L157.728 127.272L158.495 127.37L277.098 142.5L158.495 157.63L157.728 157.728L157.63 158.496L142.5 277.098L127.37 158.496L127.272 157.728L126.505 157.63L7.90234 142.5L126.505 127.37L127.272 127.272L127.37 126.505L142.5 7.90259L157.63 126.505Z"
+                        stroke="white" stroke-opacity="0.1" stroke-width="2" />
+                </svg>
+                <div class="text1" data-aos="fade-left">
+                    Доверьтесь нашему опыту и профессионализму,
+                    чтобы у вас было одно важное задание: наслаждаться мероприятием!
+                    Мы гарантируем вам, что ваше событие станет запоминающимся!
+                </div>
+                <div class="text2" data-aos="fade-right">
+                    Мечтайте креативно, мы сделаем это реальностью “KreativeDreamz”!
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec_6">
+        <div class="container">
+            <div class="sub-title">Отзывы</div>
+            <h1 class="head-title">Нам доверились <br>
+                более 1000 людей
+            </h1>
+            <div class="swiper-cont">
+                <div class="swiper-review-prev"></div>
+                <div class="swiper-review-next"></div>
+                <div class="swiper-review">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="title">
+                                “Провели конференцию на 100 человек!<br> Это было супер!”
+                            </div>
+                            <div class="message">
+                                Выражаем благодарность Вам и команде ООО «МОСКОВ ИВЕНТ» за отличную организацию и проведение Новогоднего корпоративного мероприятия «Año Nuevo Vìspera». Сотрудники Вашего агентства выполнили работу на высшем уровне и помогли нашей команде окунуться в праздничную атмосферу мексиканского праздника!Спасибо за Ваш профессионализм и ответственный подход к делу!
+                            </div>
+                            <div class="name">
+                                Иван Иванов, Восток-1
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="title">
+                                “Провели конференцию на 100 человек!<br> Это было супер!”
+                            </div>
+                            <div class="message">
+                                Выражаем благодарность Вам и команде ООО «МОСКОВ ИВЕНТ» за отличную Выражаем благодарность Вам и команде ООО «МОСКОВ ИВЕНТ» за отличную организацию и проведение Новогоднего корпоративного мероприятия «Año Nuevo Vìspera». Сотрудники Вашего агентства выполнили работу на высшем уровне и помогли нашей команде окунуться в праздничную атмосферу мексиканского праздника!Спасибо за Ваш профессионализм и ответственный подход к делу!
+                            </div>
+                            <div class="name">
+                                Иван Иванов, Восток-1
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="title">
+                                “Провели конференцию на 100 человек!<br> Это было супер!”
+                            </div>
+                            <div class="message">
+                                Выражаем благодарность Вам и команде ООО «МОСКОВ ИВЕНТ» за отличную организацию и проведение Новогоднего корпоративного мероприятия «Año Nuevo Vìspera». Сотрудники Вашего агентства выполнили работу на высшем уровне и помогли нашей команде окунуться в праздничную атмосферу мексиканского праздника!Спасибо за Ваш профессионализм и ответственный подход к делу!
+                            </div>
+                            <div class="name">
+                                Иван Иванов, Восток-1
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="title">
+                                “Провели конференцию на 100 человек!<br> Это было супер!”
+                            </div>
+                            <div class="message">
+                                ВВВВВВВВВВВВВВВВВВВВВВыражаем благодарность Вам и команде ООО «МОСКОВ ИВЕНТ» за отличную организацию и проведение Новогоднего корпоративного мероприятия «Año Nuevo Vìspera». Сотрудники Вашего агентства выполнили работу на высшем уровне и помогли нашей команде окунуться в праздничную атмосферу мексиканского праздника!Спасибо за Ваш профессионализм и ответственный подход к делу!
+                            </div>
+                            <div class="name">
+                                Иван Иванов, Восток-1
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="title">
+                                “Провели конференцию на 100 человек!<br> Это было супер!”
+                            </div>
+                            <div class="message">
+                                Выражаем благодарность Вам и команде ООО «МОСКОВ ИВЕНТ» за отличную организацию и проведение Новогоднего корпоративного мероприятия «Año Nuevo Vìspera». Сотрудники Вашего агентства выполнили работу на высшем уровне и помогли нашей команде окунуться в праздничную атмосферу мексиканского праздника!Спасибо за Ваш профессионализм и ответственный подход к делу!
+                                Выражаем благодарность Вам и команде ООО «МОСКОВ ИВЕНТ» за отличн
+                            </div>
+                            <div class="name">
+                                Иван Иванов, Восток-1
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="title">
+                                “Провели конференцию на 100 человек! Это было супер!”
+                            </div>
+                            <div class="message">
+                                Выражаем благодарность Вам и команде ООО «МОСКОВ ИВЕНТ» за отличную организацию и проведение Новогоднего корпоративного мероприятия «Año Nuevo Vìspera». Сотрудники Вашего агентства выполнили работу на высшем уровне и помогли нашей команде окунуться в праздничную атмосферу мексиканского праздника!Спасибо за Ваш профессионализм и ответственный подход к делу!
+                            </div>
+                            <div class="name">
+                                Иван Иванов, Восток-1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec_7">
+        <picture><source srcset="img/ell-4.webp" type="image/webp"><img src="img/ell-4.png" alt="" class="ell ell-4"></picture>
+        <div class="container" data-aos="fade-down">
+            <h1 class="head-title">Наши клиенты
+            </h1>
+            <div class="clients-cont">
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+                <div class="clients-item">
+                    <picture><source srcset="img/logoclient.webp" type="image/webp"><img src="img/logoclient.png" alt=""></picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec_8">
+        <div class="container">
+            <div class="sub-title">Этапы</div>
+            <h1 class="head-title">Как строится работа?</h1>
+            <div class="points-cont">
+                <div class="sub-cont" data-aos="fade-right">
+                    <div class="point-item">
+                        <div class="point">
+                            1
+                        </div>
+                        <div class="title">
+                            Вы обращаетесь к нам
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point">
+                            2
+                        </div>
+                        <div class="title">
+                            Выслушаем ваши пожелания
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point">
+                            3
+                        </div>
+                        <div class="title">
+                            Сформируем ваш бюджет
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-cont" data-aos="fade-left">
+                    <div class="point-item">
+                        <div class="point">
+                            4
+                        </div>
+                        <div class="title">
+                            Подберем для вас площадку
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point">
+                            5
+                        </div>
+                        <div class="title">
+                            Распишем сценарий мероприятия
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point">
+                            6
+                        </div>
+                        <div class="title">
+                            Проконтролируем мероприятие
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sec_9">
+        <div class="container" data-aos="fade-up">
+            <div class="line"></div>
+            <div class="top-cont">
+                <div class="title">Получите бесплатный расчет мероприятия за 1 день</div>
+                <div class="text">Все просто, быстро и качественно</div>
+                <button type="button" class="main-btn mdl-btn" data-bs-whatever="default" data-bs-toggle="modal" data-bs-target="#Modal">Оставить заявку</button>
+            </div>
+            <div class="line"></div>
+            <div class="bottom-cont">
+                <a href="tel:+79801821101">
+                    +7 980 182 11 01
+                </a>
+                <a href="mailto:kreativedreamz1@gmail.com">
+                    kreativedreamz1@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+    <picture><source srcset="img/ell-5.webp" type="image/webp"><img src="img/ell-5.png" alt="" class="ell ell-5"></picture>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.svg" alt="logo">
+        </div>
+        <a href="#sec_4">Цены</a>
+        <a href="#sec_5">О компании</a>
+        <a href="#sec_3">Наши мероприятия</a>
+        <a href="#sec_8">Этапы работы</a>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20231208225415"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js?_v=20231208225415"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20231208225415"></script>
+    <script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20231208225415"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js?_v=20231208225415"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js?_v=20231208225415"
+        integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js?_v=20231208225415" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="js/app.min.js?_v=20231208225415"></script>
+    <script src="files/form.js?_v=20231208225415"></script>
+    <script>
+        function openTab(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "flex";
+            evt.currentTarget.className += " active";
+            AOS.refreshHard();
+        }
+    </script>
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>

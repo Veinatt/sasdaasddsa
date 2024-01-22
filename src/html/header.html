@@ -1,0 +1,92 @@
+<header>
+    <div class="container">
+        <div class="sub-header">
+            <div class="sh-address">
+                Московская область, Москва
+            </div>
+            <a href="tel:+79801821101" class="sh-tel">
+                +7 980 182 11 01
+            </a>
+            <a href="mailto:kreativedreamz1@gmail.com" class="sh-mail">
+                kreativedreamz1@gmail.com
+            </a>
+            <button type="button" class="main-btn sh-btn" data-bs-whatever="default" data-bs-toggle="modal" data-bs-target="#Modal">Заказать
+                звонок</button>
+        </div>
+        <div class="main-header">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+            <a href="#sec_4">Цены</a>
+            <a href="#sec_5">О компании</a>
+            <a href="#sec_3">Наши мероприятия</a>
+            <a href="#sec_8">Этапы работы</a>
+        </div>
+        <div class="mobile-header">
+            <div class="logo">
+                <img src="img/logo-mob.svg" alt="logo">
+            </div>
+            <button type="button" class="main-btn sh-btn" data-bs-whatever="default" data-bs-toggle="modal" data-bs-target="#Modal">Заказать
+                звонок</button>
+            <div class="burger-wrapper">
+                <div class="burger">
+                    <span class="sp"></span>
+                </div>
+            </div>
+            <div class="links-cont">
+                <div class="links">
+                    <a href="#sec_4">Цены</a>
+                    <a href="#sec_5">О компании</a>
+                    <a href="#sec_3">Наши мероприятия</a>
+                    <a href="#sec_8">Этапы работы</a>
+                </div>
+                <div class="bottom-cont">
+                    <a href="tel:+79801821101" class="sh-tel">
+                        +7 980 182 11 01
+                    </a>
+                    <a href="mailto:kreativedreamz1@gmail.com" class="sh-mail">
+                        kreativedreamz1@gmail.com
+                    </a>
+                    <div class="sh-address">
+                        Московская область, Москва
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down">
+        <div class="modal-content">
+            <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="main-cont">
+                <div class="title">
+                    Оставьте заявку
+                    и перезвоним
+                    вам уже сегодня
+                </div>
+                <form id="form" action="form-handler.php" onsubmit="form_submit(event)" method="POST" data-bs-whatever="">
+                    <div class="in-row">
+                        <div class="in-item">
+                            <div class="in-label">Имя</div>
+                            <input type="name" placeholder="Иван" id="FormInputName" name="FormInputName">
+                        </div>
+                        <div class="in-item">
+                            <div class="in-label">Номер телефона</div>
+                            <input type="tel" placeholder="+7 ___-__-__" id="FormInputTel" name="FormInputTel">
+                        </div>
+                    </div>
+                    <button type="submit" class="main-btn mdl-btn">Оставить заявку</button>
+                </form>
+            </div>
+            <div class="success-cont">
+                <div class="title">
+                    Спасибо за вашу заявку!
+                </div>
+                <div class="text">
+                    Мы свяжемся с вами в ближайшее время!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
