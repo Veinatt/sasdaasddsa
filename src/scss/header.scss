@@ -67,9 +67,11 @@ header {
         @media screen and (max-width:1000px) {
             display: flex;
         }
+
         @media screen and (max-width:400px) {
             gap: 10px;
         }
+
         .burger-wrapper {
             z-index: 70;
             display: flex;
@@ -125,9 +127,11 @@ header {
             bottom: 8px;
             background-color: $clr-gray;
         }
+
         .burger.activebur .sp {
             display: none;
         }
+
         .links-cont {
             z-index: 50;
             position: fixed;
@@ -142,6 +146,7 @@ header {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             .links {
                 display: flex;
                 flex-direction: column;
@@ -149,18 +154,22 @@ header {
                 align-items: center;
                 gap: 10px;
             }
+
             &.activebur {
                 right: 0
             }
+
             .bottom-cont {
                 position: absolute;
                 bottom: 50px;
                 display: flex;
                 align-items: center;
                 gap: 20px;
+
                 .sh-address {
                     color: $clr-25white;
                 }
+
                 @media screen and (max-width:550px) {
                     flex-direction: column;
                     bottom: 20px;
@@ -169,7 +178,7 @@ header {
             }
         }
     }
-    
+
 }
 
 .modal {
@@ -179,13 +188,16 @@ header {
         padding: 50px;
         border-radius: 40px;
         position: relative;
+
         @media screen and (max-width:1200px) {
             border-radius: 0;
             border: 0;
         }
+
         @media screen and (max-width:550px) {
             padding: 20px;
         }
+
         .close-modal {
             &::after {
                 content: url('data:image/svg+xml,<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.25 22.25L6.75 6.75" stroke="white" stroke-width="1.26811" stroke-linecap="round"/><path d="M22.25 6.75L6.75 22.25" stroke="white" stroke-width="1.26811" stroke-linecap="round"/></svg>');
@@ -199,13 +211,14 @@ header {
                 padding-top: 7px;
                 top: 50px;
                 right: 50px;
+
                 @media screen and (max-width:550px) {
                     top: 20px;
                     right: 20px;
                     height: 40px;
                     padding-top: 5px;
                     content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.8335 15.4995L4.50016 5.16618" stroke="white" stroke-width="1.26811" stroke-linecap="round"/><path d="M14.8335 5.1665L4.50016 15.4998" stroke="white" stroke-width="1.26811" stroke-linecap="round"/></svg>');
-                
+
                 }
             }
         }
@@ -215,14 +228,16 @@ header {
             width: 8.5em;
             margin-bottom: 10px;
         }
+
         .sub-title {
             @extend %headline_r_36;
-            margin-bottom: 40px;
             color: #fff;
+
             span {
                 color: $clr-gold;
             }
         }
+
         .success-cont {
             display: none;
 
@@ -234,9 +249,13 @@ header {
         .in-row {
             display: flex;
             gap: 30px;
+            align-items: center;
+            margin-top: 40px;
+
             @media screen and (max-width:550px) {
                 flex-direction: column;
             }
+
             .in-label {
                 margin-bottom: 10px;
 
@@ -253,12 +272,26 @@ header {
                 &:focus {
                     border: 2px solid $clr-gray;
                 }
+
                 @media screen and (max-width:550px) {
                     width: 100%;
                 }
             }
 
-            margin-bottom: 40px;
+            .timer {
+                @extend %headline_r_36;
+                .timer__items {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+                .timer__text {
+                    margin-left: -5px;
+                }
+                * {
+                    color: $clr-gold;
+                }
+            }
         }
     }
 }

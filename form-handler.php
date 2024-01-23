@@ -4,7 +4,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $type = $_POST['form_type'];
     $name = $_POST['form_name'];
     $tel = $_POST['form_tel'];
-    $to = "denmuraviov17@gmail.com";
+    $to = "kreativedreamz1@gmail.com";
 
     if(isset($_POST['form_type'])) {
         if($type == "conf") {
