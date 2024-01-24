@@ -21,7 +21,8 @@ function ready(fn) {
 
 document.addEventListener('DOMContentLoaded', function () {
   var currentDate = new Date();
-  var deadline = currentDate.setSeconds(currentDate.getSeconds() + 300);
+  localStorage.clear();
+  var deadline = currentDate.setSeconds(currentDate.getSeconds() + 30);
   if (localStorage.getItem('deadline') === null) {
     localStorage.setItem('deadline', deadline);
   } else {
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       clearInterval(timerId);
       document.querySelector('#Modal .sub-title').style.display = 'none';
       document.querySelector('.timer-cont').style.display = 'none';
+      document.querySelector('.timer-cont').classList.add('timer-done');
     }
     const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
     const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
@@ -304,7 +306,7 @@ new ScrollMagic.Scene({
   })
   .setTween(TweenMax.to(".point-item-1", 1, {
     css: {
-      opacity: .3
+      opacity: .3,
     }
   }))
   .addTo(controller)
@@ -328,7 +330,20 @@ new ScrollMagic.Scene({
   })
   .setTween(TweenMax.to(".point-item-1", 1, {
     css: {
-      opacity: 1
+      opacity: 1,
+      textShadow: '0px 0px 10px rgba(255, 255, 255, 1)'
+    }
+  }))
+  .addTo(controller)
+  new ScrollMagic.Scene({
+    triggerElement: "#sec_8",
+    offset: 400,
+    triggerHook: 0,
+    duration: 1
+  })
+  .setTween(TweenMax.to(".point-item-1", 1, {
+    css: {
+      textShadow: '0px 0px 0px rgba(255, 255, 255, 1)'
     }
   }))
   .addTo(controller)
@@ -352,7 +367,20 @@ new ScrollMagic.Scene({
   })
   .setTween(TweenMax.to(".point-item-2", 1, {
     css: {
-      opacity: 1
+      opacity: 1,
+      textShadow: '0px 0px 10px rgba(255, 255, 255, 1)'
+    }
+  }))
+  .addTo(controller)
+  new ScrollMagic.Scene({
+    triggerElement: "#sec_8",
+    offset: 600,
+    triggerHook: 0,
+    duration: 1
+  })
+  .setTween(TweenMax.to(".point-item-2", 1, {
+    css: {
+      textShadow: '0px 0px 0px rgba(255, 255, 255, 1)'
     }
   }))
   .addTo(controller)
@@ -376,7 +404,20 @@ new ScrollMagic.Scene({
   })
   .setTween(TweenMax.to(".point-item-3", 1, {
     css: {
-      opacity: 1
+      opacity: 1,
+      textShadow: '0px 0px 10px rgba(255, 255, 255, 1)'
+    }
+  }))
+  .addTo(controller)
+  new ScrollMagic.Scene({
+    triggerElement: "#sec_8",
+    offset: 800,
+    triggerHook: 0,
+    duration: 1
+  })
+  .setTween(TweenMax.to(".point-item-3", 1, {
+    css: {
+      textShadow: '0px 0px 0px rgba(255, 255, 255, 1)'
     }
   }))
   .addTo(controller)
@@ -400,7 +441,20 @@ new ScrollMagic.Scene({
   })
   .setTween(TweenMax.to(".point-item-4", 1, {
     css: {
-      opacity: 1
+      opacity: 1,
+      textShadow: '0px 0px 10px rgba(255, 255, 255, 1)'
+    }
+  }))
+  .addTo(controller)
+  new ScrollMagic.Scene({
+    triggerElement: "#sec_8",
+    offset: 1000,
+    triggerHook: 0,
+    duration: 1
+  })
+  .setTween(TweenMax.to(".point-item-4", 1, {
+    css: {
+      textShadow: '0px 0px 0px rgba(255, 255, 255, 1)'
     }
   }))
   .addTo(controller)
@@ -424,7 +478,20 @@ new ScrollMagic.Scene({
   })
   .setTween(TweenMax.to(".point-item-5", 1, {
     css: {
-      opacity: 1
+      opacity: 1,
+      textShadow: '0px 0px 10px rgba(255, 255, 255, 1)'
+    }
+  }))
+  .addTo(controller)
+  new ScrollMagic.Scene({
+    triggerElement: "#sec_8",
+    offset: 1200,
+    triggerHook: 0,
+    duration: 1
+  })
+  .setTween(TweenMax.to(".point-item-5", 1, {
+    css: {
+      textShadow: '0px 0px 0px rgba(255, 255, 255, 1)'
     }
   }))
   .addTo(controller)
@@ -436,7 +503,20 @@ new ScrollMagic.Scene({
   })
   .setTween(TweenMax.to(".point-item-6", 1, {
     css: {
-      opacity: 1
+      opacity: 1,
+      textShadow: '0px 0px 10px rgba(255, 255, 255, 1)'
+    }
+  }))
+  .addTo(controller)
+  new ScrollMagic.Scene({
+    triggerElement: "#sec_8",
+    offset: 1400,
+    triggerHook: 0,
+    duration: 1
+  })
+  .setTween(TweenMax.to(".point-item-6", 1, {
+    css: {
+      textShadow: '0px 0px 0px rgba(255, 255, 255, 1)'
     }
   }))
   .addTo(controller)

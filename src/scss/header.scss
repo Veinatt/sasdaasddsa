@@ -254,13 +254,18 @@ header {
 
             @media screen and (max-width:550px) {
                 flex-direction: column;
+                .in-item {
+                    width: 100%;
+                }
             }
 
             .in-label {
                 margin-bottom: 10px;
 
             }
-
+            @media screen and (max-width:550px) {
+                flex-direction: column;
+            }
             input {
                 padding: 1em 1.25em;
                 border-radius: 2em;

@@ -230,10 +230,6 @@ body {
 	@extend %title_r_64;
 	position: relative;
 	z-index: 3;
-
-	@media screen and (max-width:550px) {
-		text-align: justify;
-	}
 }
 
 
@@ -520,7 +516,7 @@ body {
 			position: relative;
 			width: 100%;
 			height: auto;
-			aspect-ratio: 1.6;
+			aspect-ratio: 16/9;
 
 			&:not(:nth-child(3n-2)) {
 				width: calc(50% - 5px);
@@ -860,7 +856,11 @@ body {
 				color: $clr-60white;
 
 				@media screen and (max-width:550px) {
-					text-align: justify;
+					span {
+						display: inline-block;
+						width: 100%;
+						text-align: justify;
+					}
 				}
 
 				a {
@@ -1105,12 +1105,11 @@ body {
 
 		.clients-item {
 			position: relative;
-			cursor: pointer;
 			width: calc((100% - 200px) / 6);
 			transition: all .3s ease-in-out;
 
 			@media screen and (max-width:550px) {
-				width: calc((100% - 40px) / 3);
+				width: 100%;
 			}
 
 			&::before {
@@ -1125,56 +1124,13 @@ body {
 				opacity: 0;
 			}
 
-			&:nth-child(1)::before {
-				background: radial-gradient(ellipse at center, rgba(63, 94, 251, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(2)::before {
-				background: radial-gradient(ellipse at center, rgba(161, 70, 252, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(3)::before {
-				background: radial-gradient(ellipse at center, rgba(252, 70, 92, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(4)::before {
-				background: radial-gradient(ellipse at center, rgba(70, 245, 252, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(5)::before {
-				background: radial-gradient(ellipse at center, rgba(70, 252, 134, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(6)::before {
-				background: radial-gradient(ellipse at center, rgba(119, 252, 70, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(7)::before {
-				background: radial-gradient(ellipse at center, rgba(214, 252, 70, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(8)::before {
-				background: radial-gradient(ellipse at center, rgba(252, 210, 70, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(9)::before {
-				background: radial-gradient(ellipse at center, rgba(252, 85, 70, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(10)::before {
-				background: radial-gradient(ellipse at center, rgba(63, 94, 251, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(11)::before {
-				background: radial-gradient(ellipse at center, rgba(63, 94, 251, .7) 0%, rgba(252, 70, 107, 0) 70%);
-			}
-
-			&:nth-child(12)::before {
-				background: radial-gradient(ellipse at center, rgba(63, 94, 251, .7) 0%, rgba(252, 70, 107, 0) 70%);
+			&:before {
+				background: radial-gradient(ellipse at center, rgba(209, 151, 97, .7) 0%, rgba(252, 70, 107, 0) 70%);
 			}
 
 			img {
 				z-index: 2;
+				width: 100%;
 			}
 
 			&:hover {
@@ -1189,7 +1145,7 @@ body {
 #sec_8 {
 	position: relative;
 	height: calc(100vh + 1400px);
-
+	overflow: unset !important;
 	.head-title {
 		margin: 20px 0;
 	}
@@ -1200,6 +1156,9 @@ body {
 		left: 0;
 		position: sticky;
 		padding-top: 200px;
+		@media screen and (max-width:1000px) {
+			padding-top: 100px;
+		}
 	}
 
 	.point-item {
@@ -1255,6 +1214,7 @@ body {
 			@media screen and (max-width:550px) {
 				gap: 20px;
 				flex-direction: column;
+				font-size: 25px;
 			}
 		}
 	}
