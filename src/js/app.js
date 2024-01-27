@@ -21,8 +21,7 @@ function ready(fn) {
 
 document.addEventListener('DOMContentLoaded', function () {
   var currentDate = new Date();
-  localStorage.clear();
-  var deadline = currentDate.setSeconds(currentDate.getSeconds() + 30);
+  var deadline = currentDate.setHours(currentDate.getHours() + 15);
   if (localStorage.getItem('deadline') === null) {
     localStorage.setItem('deadline', deadline);
   } else {
