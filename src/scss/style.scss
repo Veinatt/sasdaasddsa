@@ -352,7 +352,7 @@ body {
 #sec_1 {
 	height: 100svh;
 	width: 100%;
-	background-image: url('../img/main-bg.png');
+	// background-image: url('../img/main-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -1061,7 +1061,6 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 40px;
-		align-items: center;
 
 		@media screen and (max-width:550px) {
 			gap: 20px;
@@ -1071,25 +1070,14 @@ body {
 			position: relative;
 			width: calc((100% - 200px) / 6);
 			transition: all .3s ease-in-out;
-
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 1em;
+			padding: 10px;
+			box-shadow: 0px 0px 25px 0px rgba(209, 151, 97, .0);
 			@media screen and (max-width:550px) {
-				width: 100%;
-			}
-
-			&::before {
-				transform: translate(-50%, -50%);
-				top: 50%;
-				left: 50%;
-				transition: all .3s ease-in-out;
-				position: absolute;
-				content: '';
-				width: 130%;
-				height: 130%;
-				opacity: 0;
-			}
-
-			&:before {
-				background: radial-gradient(ellipse at center, rgba(209, 151, 97, .7) 0%, rgba(252, 70, 107, 0) 70%);
+				width: calc((100% - 40px) / 2);
 			}
 
 			img {
@@ -1098,9 +1086,7 @@ body {
 			}
 
 			&:hover {
-				&::before {
-					opacity: 1;
-				}
+				box-shadow: 0px 0px 15px 0px rgba(209, 151, 97, .7);
 			}
 		}
 	}
