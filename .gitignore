@@ -1,6 +1,7 @@
 /party
 /node_modules
 /gulp
+/src/files/main.mp4
 gulpfile.js
 package.json
 package-lock.json
