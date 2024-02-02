@@ -207,6 +207,9 @@ button:focus {
 html {
 	scroll-padding: 165px;
 	scroll-behavior: smooth;
+	@media (max-width:800px) {
+		scroll-padding: 80px;
+	}
 }
 
 body {
@@ -549,7 +552,7 @@ body {
 					aspect-ratio: 1;
 					display: grid;
 					place-items: center;
-					padding-top: 6px;
+					padding-top: 7px;
 					padding-left: 3px;
 					border-radius: 50%;
 				}

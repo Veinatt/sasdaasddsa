@@ -21,7 +21,7 @@ function ready(fn) {
 
 document.addEventListener('DOMContentLoaded', function () {
   var currentDate = new Date();
-  var deadline = currentDate.setHours(currentDate.getHours() + 15);
+  var deadline = currentDate.setHours(currentDate.getHours() + 3);
   if (localStorage.getItem('deadline') === null) {
     localStorage.setItem('deadline', deadline);
   } else {
@@ -290,7 +290,7 @@ $(document).ready(function () {
     $('.burger, .links-cont').toggleClass('activebur');
     $('body').toggleClass('lock');
   })
-  $('.menu-a').click(function (event) {
+  $('.links a').click(function (event) {
     $('.burger, .links-cont').removeClass('activebur');
     $('body').removeClass('lock');
   })
