@@ -274,6 +274,23 @@ img {
   }
 }
 
+.modal .modal-content #formQuiz .quiz-title-cont .quiz-title {
+  font-family: ProximaNova-Regular;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+@media screen and (max-width: 1400px) {
+  .modal .modal-content #formQuiz .quiz-title-cont .quiz-title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .modal .modal-content #formQuiz .quiz-title-cont .quiz-title {
+    font-size: 22px;
+  }
+}
+
 body {
   font-family: ProximaNova-Regular;
   font-size: 18px;
@@ -536,6 +553,9 @@ header .mobile-header .links-cont .bottom-cont .sh-address {
     padding: 20px;
   }
 }
+.modal .modal-content .close-modal {
+  z-index: 10;
+}
 .modal .modal-content .close-modal::after {
   content: url('data:image/svg+xml,<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.25 22.25L6.75 6.75" stroke="white" stroke-width="1.26811" stroke-linecap="round"/><path d="M22.25 6.75L6.75 22.25" stroke="white" stroke-width="1.26811" stroke-linecap="round"/></svg>');
   height: 60px;
@@ -621,6 +641,149 @@ header .mobile-header .links-cont .bottom-cont .sh-address {
 }
 .modal .modal-content .in-row .timer * {
   color: #d19761;
+}
+.modal .modal-content #formQuiz {
+  position: relative;
+  margin-top: 20px;
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+.modal .modal-content #formQuiz .quiz-title-cont {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.modal .modal-content #formQuiz .quiz-title-cont .quenum {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #d19761;
+  color: #fff;
+  line-height: 1em;
+  font-size: 24px;
+  position: relative;
+}
+.modal .modal-content #formQuiz .quiz-title-cont .quenum span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal .modal-content #formQuiz .quiz-title-cont .quiz-title {
+  line-height: 1em;
+}
+.modal .modal-content #formQuiz .quiz-cont:not(#quizcont1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1b1b1b;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.modal .modal-content #formQuiz .quiz-cont:not(#quizcont1).active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal .modal-content #formQuiz #quizcont2 {
+  z-index: 2;
+}
+.modal .modal-content #formQuiz #quizcont3 {
+  z-index: 3;
+}
+.modal .modal-content #formQuiz .radio-cont {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: 7px;
+}
+.modal .modal-content #formQuiz input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.modal .modal-content #formQuiz .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.modal .modal-content #formQuiz .radio-cont:hover input ~ .checkmark {
+  background-color: #eee;
+}
+.modal .modal-content #formQuiz .radio-cont input:checked ~ .checkmark {
+  background-color: #fff;
+}
+.modal .modal-content #formQuiz .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.modal .modal-content #formQuiz .radio-cont input:checked ~ .checkmark:after {
+  display: block;
+}
+.modal .modal-content #formQuiz .radio-cont .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #d19761;
+}
+.modal .modal-content #formQuiz input[type=text] {
+  padding: 1em 1.25em;
+  border-radius: 2em;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: transparent;
+  color: #f0f0f0;
+  display: none;
+}
+.modal .modal-content #formQuiz input[type=text]:active, .modal .modal-content #formQuiz input[type=text]:focus {
+  border: 2px solid #f0f0f0;
+}
+@media screen and (max-width: 550px) {
+  .modal .modal-content #formQuiz input[type=text] {
+    width: 100%;
+  }
+}
+.modal .modal-content #formQuiz .radio-cont:has(.radio-else:checked) ~ input[type=text] {
+  display: block;
+}
+.modal .modal-content #formQuiz .quiz-next, .modal .modal-content #formQuiz .quiz-prev {
+  border: 1px solid #d19761;
+  padding: 0.5em 1.5em;
+  background-color: #d19761;
+  border-radius: 2em;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.modal .modal-content #formQuiz .quiz-next:disabled, .modal .modal-content #formQuiz .quiz-prev:disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.modal .modal-content #formQuiz .quiz-btn-cont {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer {

@@ -20,6 +20,33 @@ function ready(fn) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  $('#ModalQuiz').modal('show');
+  document.querySelectorAll('.quiz-cont').forEach(quiz => {
+    quiz.querySelectorAll('input[type="radio"]').forEach(quizbtn => {
+      quizbtn.addEventListener('change', function () {
+        if(quizbtn.checked) {
+          quiz.querySelector('.quiz-next').disabled = false
+        } else {
+          quiz.querySelector('.quiz-next').disabled = true
+        }
+      })
+    })
+  })
+  document.querySelectorAll('.quiz-cont .quiz-next').forEach(quiznext => {
+    quiznext.addEventListener('click', function() {
+      quiznext.parentNode.parentNode.nextElementSibling.classList.add('active')
+    })
+  })
+  
+  document.querySelectorAll('.quiz-cont .quiz-prev').forEach(quizprev => {
+    quizprev.addEventListener('click', function() {
+      quizprev.parentNode.parentNode.querySelectorAll('input[type="radio"]').forEach(quizbtn => {
+        quizbtn.checked = false
+      })
+      quizprev.parentNode.parentNode.classList.remove('active')
+      quizprev.parentNode.parentNode.querySelector('.quiz-next').disabled = true
+    })
+  })
   var currentDate = new Date();
   var deadline = currentDate.setHours(currentDate.getHours() + 3);
   if (localStorage.getItem('deadline') === null) {

@@ -73,6 +73,7 @@ function form_submit(e) {
             if (xhr.readyState != 4) return;
 
             if (xhr.status === 200) {
+                ym(96749379,'reachGoal','zayvka')
                 document.querySelector('.modal .main-cont').style.display = 'none';
                 document.querySelector('.modal .success-cont').style.display = 'block';
             }
