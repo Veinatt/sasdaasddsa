@@ -21,32 +21,7 @@ function ready(fn) {
 
 document.addEventListener('DOMContentLoaded', function () {
   $('#ModalQuiz').modal('show');
-  document.querySelectorAll('.quiz-cont').forEach(quiz => {
-    quiz.querySelectorAll('input[type="radio"]').forEach(quizbtn => {
-      quizbtn.addEventListener('change', function () {
-        if(quizbtn.checked) {
-          quiz.querySelector('.quiz-next').disabled = false
-        } else {
-          quiz.querySelector('.quiz-next').disabled = true
-        }
-      })
-    })
-  })
-  document.querySelectorAll('.quiz-cont .quiz-next').forEach(quiznext => {
-    quiznext.addEventListener('click', function() {
-      quiznext.parentNode.parentNode.nextElementSibling.classList.add('active')
-    })
-  })
-  
-  document.querySelectorAll('.quiz-cont .quiz-prev').forEach(quizprev => {
-    quizprev.addEventListener('click', function() {
-      quizprev.parentNode.parentNode.querySelectorAll('input[type="radio"]').forEach(quizbtn => {
-        quizbtn.checked = false
-      })
-      quizprev.parentNode.parentNode.classList.remove('active')
-      quizprev.parentNode.parentNode.querySelector('.quiz-next').disabled = true
-    })
-  })
+
   var currentDate = new Date();
   var deadline = currentDate.setHours(currentDate.getHours() + 3);
   if (localStorage.getItem('deadline') === null) {
@@ -116,7 +91,113 @@ ready(function () {
     AOS.refresh();
   });
 });
+document.querySelectorAll('.quiz-cont').forEach(quiz => {
+  quiz.querySelectorAll('input.notelse-text').forEach(quiztext => {
+    quiztext.addEventListener('input', function () {
+      if (quiztext.value != '') {
+        quiz.querySelector('.quiz-next').disabled = false
+      } else {
+        quiz.querySelector('.quiz-next').disabled = true
+      }
+    })
+  })
+  quiz.querySelectorAll('input[type="radio"]').forEach(quizbtn => {
+    quizbtn.addEventListener('change', function () {
+      if (quizbtn.classList.contains('radio-else')) {
+        console.log(quizbtn.checked);
+        if (quizbtn.checked) {
+          if (quiz.querySelector('input[type="text"]').value != '') {
+            quiz.querySelector('.quiz-next').disabled = false
+          } else {
+            quiz.querySelector('.quiz-next').disabled = true
+          }
+          quiz.querySelector('input[type="text"]').addEventListener('input', function () {
+            if (quiz.querySelector('input[type="text"]').value != '') {
+              quiz.querySelector('.quiz-next').disabled = false
+            } else {
+              quiz.querySelector('.quiz-next').disabled = true
+            }
+          })
+        }
+      } else {
+        if (quizbtn.checked) {
+          quiz.querySelector('.quiz-next').disabled = false
+        } else {
+          quiz.querySelector('.quiz-next').disabled = true
+        }
+      }
+    })
+  })
 
+  if (quiz.getAttribute('id') == 'quizcont3') {
+    if (quiz.querySelector('input[type="date"]').value != '') {
+      quiz.querySelector('.quiz-next').disabled = false
+    } else {
+      quiz.querySelector('.quiz-next').disabled = true
+    }
+    quiz.querySelector('input[type="date"]').addEventListener('change', function () {
+      if (quiz.querySelector('input[type="date"]').value != '') {
+        quiz.querySelector('.quiz-next').disabled = false
+      } else {
+        quiz.querySelector('.quiz-next').disabled = true
+      }
+    })
+  }
+})
+document.querySelectorAll('.quiz-cont .quiz-next').forEach(quiznext => {
+  quiznext.addEventListener('click', function () {
+    let nextInfo = quiznext.getAttribute('data-next')
+    let nextId = quiznext.parentNode.parentNode.getAttribute('id')
+    let quiztype = document.querySelector('input[name="quiz1"]:checked').getAttribute('id')
+    if (nextId == 'quizcont3') {
+      switch (quiztype) {
+        case 'quiz1_conf':
+          document.querySelector(`#quizcont4_conf`).classList.add('active')
+          break;
+        case 'quiz1_team':
+          document.querySelector(`#quizcont4_team`).classList.add('active')
+          break;
+        case 'quiz1_mar':
+          document.querySelector(`#quizcont4_mar`).classList.add('active')
+          break;
+        case 'quiz1_birth':
+          document.querySelector(`#quizcont4_birth`).classList.add('active')
+          break;
+        default:
+          document.querySelector(`#${nextInfo}`).classList.add('active')
+          break;
+      }
+    } else if (nextId == 'quizcont4_name') {
+      switch (quiztype) {
+        case 'quiz1_corp':
+          document.querySelector(`#quizcont5_corp`).classList.add('active')
+          break;
+        default:
+          document.querySelector(`#${nextInfo}`).classList.add('active')
+          break;
+      }
+    } else {
+      document.querySelector(`#${nextInfo}`).classList.add('active')
+    }
+
+  })
+})
+
+document.querySelectorAll('.quiz-cont .quiz-prev').forEach(quizprev => {
+  quizprev.addEventListener('click', function () {
+    quizprev.parentNode.parentNode.querySelectorAll('input[type="radio"]').forEach(quizbtn => {
+      quizbtn.checked = false
+    })
+    quizprev.parentNode.parentNode.classList.remove('active')
+    quizprev.parentNode.parentNode.querySelector('.quiz-next').disabled = true
+    quizprev.parentNode.parentNode.querySelectorAll('input[type="text"]').forEach(quiztext => {
+      quiztext.value = ''
+    })
+    if (quizprev.parentNode.parentNode.getAttribute('id') == 'quizcont3') {
+      quizprev.parentNode.parentNode.querySelector('input[type="date"]').value = ''
+    }
+  })
+})
 
 function onElementHeightChange(elm, callback) {
   var lastHeight = elm.clientHeight
@@ -361,7 +442,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 400,
     triggerHook: 0,
@@ -373,7 +454,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 400,
     triggerHook: 0,
@@ -398,7 +479,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 600,
     triggerHook: 0,
@@ -410,7 +491,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 600,
     triggerHook: 0,
@@ -435,7 +516,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 800,
     triggerHook: 0,
@@ -447,7 +528,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 800,
     triggerHook: 0,
@@ -472,7 +553,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 1000,
     triggerHook: 0,
@@ -484,7 +565,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 1000,
     triggerHook: 0,
@@ -509,7 +590,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 1200,
     triggerHook: 0,
@@ -534,7 +615,7 @@ new ScrollMagic.Scene({
     }
   }))
   .addTo(controller)
-  new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#sec_8",
     offset: 1400,
     triggerHook: 0,

@@ -80,7 +80,38 @@ function form_submit(e) {
         }
     }
 }
+function form_submit_quiz(e) {
+    e.preventDefault();
+    var form_name, form_tel, form_type, form_sale;
+    form_name = document.getElementById('FormInputName').value;
+    form_tel = document.getElementById('FormInputTel').value;
+    form_type = document.getElementById('form').getAttribute('data-bs-whatever');
+    if(document.querySelector('.timer-cont').classList.contains('timer-done')) {
+        form_sale = 'Без скидки!';
+    } else {
+        form_sale = 'Со скидкой!';
+    }
+    if (check(form_name, true) && check(form_tel.replace(/[^0-9]/g, ""), false)) {
+        form = new FormData();
+        xhr = new XMLHttpRequest();
+        form.append('form_name', form_name);
+        form.append('form_type', form_type);
+        form.append('form_tel', form_tel);
+        form.append('form_sale', form_sale);
 
+        xhr.open('POST', 'form-handler.php');
+        xhr.send(form);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState != 4) return;
+
+            if (xhr.status === 200) {
+                ym(96749379,'reachGoal','zayvka')
+                document.querySelector('.modal .main-cont').style.display = 'none';
+                document.querySelector('.modal .success-cont').style.display = 'block';
+            }
+        }
+    }
+}
 function check(value, condition) {
     var result = false;
     if (condition) {

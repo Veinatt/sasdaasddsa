@@ -142,7 +142,7 @@
                     <div class="sub-title">
                         Пройдите небольшой <span>опрос</span> и мы с вами <span>свяжемся!</span>
                     </div>
-                    <form id="formQuiz" action="form-handler.php" onsubmit="form_submit_quiz(event)" method="POST"
+                    <form id="formQuiz" action="form-handler-quiz.php" onsubmit="form_submit_quiz(event)" method="POST"
                         data-bs-whatever="">
                         <div class="quiz-cont" id="quizcont1">
                             <div class="quiz-title-cont">
@@ -153,37 +153,37 @@
                             </div>
                             <div class="ans-cont">
                                 <label class="radio-cont">Корпоратив
-                                    <input type="radio" name="quiz1" id="quiz11">
+                                    <input type="radio" name="quiz1" id="quiz1_corp" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Конференция
-                                    <input type="radio" name="quiz1" id="quiz12">
+                                    <input type="radio" name="quiz1" id="quiz1_conf" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Тимбилдинг
-                                    <input type="radio" name="quiz1" id="quiz13">
+                                    <input type="radio" name="quiz1" id="quiz1_team" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Свадьба
-                                    <input type="radio" name="quiz1" id="quiz14">
+                                    <input type="radio" name="quiz1" id="quiz1_mar" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">День рождения
-                                    <input type="radio" name="quiz1" id="quiz15">
+                                    <input type="radio" name="quiz1" id="quiz1_birth" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Презентация
-                                    <input type="radio" name="quiz1" id="quiz16">
+                                    <input type="radio" name="quiz1" id="quiz1_pres" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Выпускной
-                                    <input type="radio" name="quiz1" id="quiz17">
+                                    <input type="radio" name="quiz1" id="quiz1_grad" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
                             <div class="quiz-btn-cont">
                                 <div></div>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont2">Далее</button>
                             </div>
                         </div>
                         <div class="quiz-cont" id="quizcont2">
@@ -195,26 +195,26 @@
                             </div>
                             <div class="ans-cont">
                                 <label class="radio-cont">До 30
-                                    <input type="radio" name="quiz2" id="quiz21">
+                                    <input type="radio" name="quiz2" id="quiz2_1" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">От 30 до 50
-                                    <input type="radio" name="quiz2" id="quiz22">
+                                    <input type="radio" name="quiz2" id="quiz2_2" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">От 50 до 100
-                                    <input type="radio" name="quiz2" id="quiz23">
+                                    <input type="radio" name="quiz2" id="quiz2_3" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Другое
-                                    <input type="radio" name="quiz2" id="quiz24" class="radio-else">
+                                    <input type="radio" name="quiz2" id="quiz2_4" class="radio-else">
                                     <span class="checkmark"></span>
                                 </label>
-                                <input type="text" placeholder="Введите количество" id="quiz24else" name="quiz24else">
+                                <input type="text" class="else-text" placeholder="Введите количество" id="quiz2_4_text" name="quiz2_4_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont1">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont3">Далее</button>
                             </div>
                         </div>
                         <div class="quiz-cont" id="quizcont3">
@@ -225,14 +225,14 @@
                                 </div>
                             </div>
                             <div class="ans-cont">
-                                <input type="date" id="quiz3" name="quiz3"/>
+                                <input type="date" id="quiz3_text" name="quiz3_text"/>
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont2">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont4_name">Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont44">
+                        <div class="quiz-cont quizcont4" id="quizcont4_mar">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>4</span></div>
                                 <div class="quiz-title">
@@ -241,25 +241,25 @@
                             </div>
                             <div class="ans-cont">
                                 <label class="radio-cont">Да
-                                    <input type="radio" name="quiz44" id="quiz441">
+                                    <input type="radio" name="quiz4_mar" id="quiz4_mar_1" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Нет
-                                    <input type="radio" name="quiz44" id="quiz442">
+                                    <input type="radio" name="quiz4_mar" id="quiz4_mar_2" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Другое
-                                    <input type="radio" name="quiz44" id="quiz443" class="radio-else">
+                                    <input type="radio" name="quiz4_mar" id="quiz4_mar_3" class="radio-else">
                                     <span class="checkmark"></span>
                                 </label>
-                                <input type="text" placeholder="Введите информацию" id="quiz443else" name="quiz443else">
+                                <input type="text" class="else-text" placeholder="Введите информацию" id="quiz4_mar_3_text" name="quiz4_mar_3_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont3">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont5_budget">Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont54">
+                        <div class="quiz-cont quizcont5" id="quizcont5_budget">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>5</span></div>
                                 <div class="quiz-title">
@@ -267,14 +267,14 @@
                                 </div>
                             </div>
                             <div class="ans-cont">
-                                <input type="text" placeholder="Введите сумму" id="quiz54" name="quiz54">
+                                <input type="text" class="notelse-text" placeholder="Введите сумму" id="quiz5_budget_text" name="quiz5_budget_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont4_name">Назад</button>
+                                <button type="submit" class="quiz-next" disabled>Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont41">
+                        <div class="quiz-cont quizcont4" id="quizcont4_name">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>4</span></div>
                                 <div class="quiz-title">
@@ -282,14 +282,14 @@
                                 </div>
                             </div>
                             <div class="ans-cont">
-                                <input type="text" placeholder="Введите название" id="quiz54" name="quiz54">
+                                <input type="text" class="notelse-text" placeholder="Введите название" id="quiz4_name_text" name="quiz4_name_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont3">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont5_budget">Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont51">
+                        <div class="quiz-cont quizcont5" id="quizcont5_corp">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>5</span></div>
                                 <div class="quiz-title">
@@ -297,14 +297,14 @@
                                 </div>
                             </div>
                             <div class="ans-cont">
-                                <input type="text" placeholder="Введите событие" id="quiz54" name="quiz54">
+                                <input type="text" class="notelse-text" placeholder="Введите событие" id="quiz5_corp_text" name="quiz5_corp_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont4_name">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont6_budget">Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont61">
+                        <div class="quiz-cont quizcont6" id="quizcont6_budget">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>6</span></div>
                                 <div class="quiz-title">
@@ -312,14 +312,14 @@
                                 </div>
                             </div>
                             <div class="ans-cont">
-                                <input type="text" placeholder="Введите сумму" id="quiz54" name="quiz54">
+                                <input type="text" class="notelse-text" placeholder="Введите сумму" id="quiz6_budget_text" name="quiz6_budget_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont4_name">Назад</button>
+                                <button type="submit" class="quiz-next" disabled>Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont43">
+                        <div class="quiz-cont quizcont4" id="quizcont4_team">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>4</span></div>
                                 <div class="quiz-title">
@@ -328,40 +328,25 @@
                             </div>
                             <div class="ans-cont">
                                 <label class="radio-cont">Отдых
-                                    <input type="radio" name="quiz43" id="quiz431">
+                                    <input type="radio" name="quiz4_team" id="quiz4_team_1" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Состязание
-                                    <input type="radio" name="quiz43" id="quiz432">
+                                    <input type="radio" name="quiz4_team" id="quiz4_team_2" class="def-radio">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-cont">Другое
-                                    <input type="radio" name="quiz43" id="quiz433" class="radio-else">
+                                    <input type="radio" name="quiz4_team" id="quiz4_team_3" class="radio-else">
                                     <span class="checkmark"></span>
                                 </label>
-                                <input type="text" placeholder="Введите информацию" id="quiz433else" name="quiz433else">
+                                <input type="text" class="else-text" placeholder="Введите информацию" id="quiz4_team_3_text" name="quiz4_team_3_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont3">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont5_budget">Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont53">
-                            <div class="quiz-title-cont">
-                                <div class="quenum"><span>5</span></div>
-                                <div class="quiz-title">
-                                    Бюджет мероприятия
-                                </div>
-                            </div>
-                            <div class="ans-cont">
-                                <input type="text" placeholder="Введите сумму" id="quiz54" name="quiz54">
-                            </div>
-                            <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
-                            </div>
-                        </div>
-                        <div class="quiz-cont" id="quizcont42">
+                        <div class="quiz-cont quizcont4" id="quizcont4_conf">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>4</span></div>
                                 <div class="quiz-title">
@@ -369,14 +354,14 @@
                                 </div>
                             </div>
                             <div class="ans-cont">
-                                <input type="text" placeholder="Введите количество" id="quiz54" name="quiz54">
+                                <input type="text" class="notelse-text" placeholder="Введите количество" id="quiz4_conf_text" name="quiz4_conf_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont3">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont5_conf">Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont52">
+                        <div class="quiz-cont quizcont5" id="quizcont5_conf">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>5</span></div>
                                 <div class="quiz-title">
@@ -384,44 +369,14 @@
                                 </div>
                             </div>
                             <div class="ans-cont">
-                                <input type="text" placeholder="Введите данные" id="quiz54" name="quiz54">
+                                <input type="text" class="notelse-text" placeholder="Введите данные" id="quiz5_conf_text" name="quiz5_conf_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont4_conf">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont6_budget">Далее</button>
                             </div>
                         </div>
-                        <div class="quiz-cont" id="quizcont62">
-                            <div class="quiz-title-cont">
-                                <div class="quenum"><span>6</span></div>
-                                <div class="quiz-title">
-                                    Бюджет мероприятия
-                                </div>
-                            </div>
-                            <div class="ans-cont">
-                                <input type="text" placeholder="Введите сумму" id="quiz54" name="quiz54">
-                            </div>
-                            <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
-                            </div>
-                        </div>
-                        <div class="quiz-cont" id="quizcont62">
-                            <div class="quiz-title-cont">
-                                <div class="quenum"><span>6</span></div>
-                                <div class="quiz-title">
-                                    Бюджет мероприятия
-                                </div>
-                            </div>
-                            <div class="ans-cont">
-                                <input type="text" placeholder="Введите сумму" id="quiz54" name="quiz54">
-                            </div>
-                            <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
-                            </div>
-                        </div>
-                        <div class="quiz-cont" id="quizcont45">
+                        <div class="quiz-cont quizcont4" id="quizcont4_birth">
                             <div class="quiz-title-cont">
                                 <div class="quenum"><span>4</span></div>
                                 <div class="quiz-title">
@@ -429,86 +384,11 @@
                                 </div>
                             </div>
                             <div class="ans-cont">
-                                <input type="text" placeholder="Введите возраст" id="quiz54" name="quiz54">
+                                <input type="text" class="notelse-text" placeholder="Введите возраст" id="quiz4_birth_text" name="quiz4_birth_text">
                             </div>
                             <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
-                            </div>
-                        </div>
-                        <div class="quiz-cont" id="quizcont55">
-                            <div class="quiz-title-cont">
-                                <div class="quenum"><span>5</span></div>
-                                <div class="quiz-title">
-                                    Бюджет мероприятия
-                                </div>
-                            </div>
-                            <div class="ans-cont">
-                                <input type="text" placeholder="Введите сумму" id="quiz54" name="quiz54">
-                            </div>
-                            <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
-                            </div>
-                        </div>
-                        <div class="quiz-cont" id="quizcont46">
-                            <div class="quiz-title-cont">
-                                <div class="quenum"><span>4</span></div>
-                                <div class="quiz-title">
-                                    Название компании
-                                </div>
-                            </div>
-                            <div class="ans-cont">
-                                <input type="text" placeholder="Введите название" id="quiz54" name="quiz54">
-                            </div>
-                            <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
-                            </div>
-                        </div>
-                        <div class="quiz-cont" id="quizcont56">
-                            <div class="quiz-title-cont">
-                                <div class="quenum"><span>5</span></div>
-                                <div class="quiz-title">
-                                    Бюджет мероприятия
-                                </div>
-                            </div>
-                            <div class="ans-cont">
-                                <input type="text" placeholder="Введите сумму" id="quiz54" name="quiz54">
-                            </div>
-                            <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
-                            </div>
-                        </div>
-                        <div class="quiz-cont" id="quizcont47">
-                            <div class="quiz-title-cont">
-                                <div class="quenum"><span>4</span></div>
-                                <div class="quiz-title">
-                                    Название организации
-                                </div>
-                            </div>
-                            <div class="ans-cont">
-                                <input type="text" placeholder="Введите название" id="quiz54" name="quiz54">
-                            </div>
-                            <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
-                            </div>
-                        </div>
-                        <div class="quiz-cont" id="quizcont57">
-                            <div class="quiz-title-cont">
-                                <div class="quenum"><span>5</span></div>
-                                <div class="quiz-title">
-                                    Бюджет мероприятия
-                                </div>
-                            </div>
-                            <div class="ans-cont">
-                                <input type="text" placeholder="Введите сумму" id="quiz54" name="quiz54">
-                            </div>
-                            <div class="quiz-btn-cont">
-                                <button type="button" class="quiz-prev">Назад</button>
-                                <button type="button" class="quiz-next" disabled>Далее</button>
+                                <button type="button" class="quiz-prev" data-prev="quizcont3">Назад</button>
+                                <button type="button" class="quiz-next" disabled data-next="quizcont5_budget">Далее</button>
                             </div>
                         </div>
                     </form>

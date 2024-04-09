@@ -695,6 +695,15 @@ header .mobile-header .links-cont .bottom-cont .sh-address {
 .modal .modal-content #formQuiz #quizcont3 {
   z-index: 3;
 }
+.modal .modal-content #formQuiz .quizcont4 {
+  z-index: 4;
+}
+.modal .modal-content #formQuiz .quizcont5 {
+  z-index: 5;
+}
+.modal .modal-content #formQuiz .quizcont6 {
+  z-index: 6;
+}
 .modal .modal-content #formQuiz .radio-cont {
   display: block;
   position: relative;
@@ -750,7 +759,6 @@ header .mobile-header .links-cont .bottom-cont .sh-address {
   border: 2px solid rgba(255, 255, 255, 0.25);
   background-color: transparent;
   color: #f0f0f0;
-  display: none;
 }
 .modal .modal-content #formQuiz input[type=text]:active, .modal .modal-content #formQuiz input[type=text]:focus {
   border: 2px solid #f0f0f0;
@@ -759,6 +767,9 @@ header .mobile-header .links-cont .bottom-cont .sh-address {
   .modal .modal-content #formQuiz input[type=text] {
     width: 100%;
   }
+}
+.modal .modal-content #formQuiz .ans-cont:has(.radio-else) input[type=text] {
+  display: none;
 }
 .modal .modal-content #formQuiz .radio-cont:has(.radio-else:checked) ~ input[type=text] {
   display: block;
