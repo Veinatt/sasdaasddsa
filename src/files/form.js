@@ -29,8 +29,8 @@ document.querySelector('#Modal').addEventListener('hidden.bs.modal', () => {
     form_name_modal.style.borderColor = "#313131";
     form_tel_modal.value = '';
     form_tel_modal.style.borderColor = "#313131";
-    document.querySelector('.modal .main-cont').style.display = 'block';
-    document.querySelector('.modal .success-cont').style.display = 'none';
+    document.querySelector('.modal-def .main-cont').style.display = 'block';
+    document.querySelector('.modal-def .success-cont').style.display = 'none';
 });
 
 
@@ -54,7 +54,7 @@ function form_submit(e) {
     form_name = document.getElementById('FormInputName').value;
     form_tel = document.getElementById('FormInputTel').value;
     form_type = document.getElementById('form').getAttribute('data-bs-whatever');
-    if(document.querySelector('.timer-cont').classList.contains('timer-done')) {
+    if (document.querySelector('.timer-cont').classList.contains('timer-done')) {
         form_sale = 'Без скидки!';
     } else {
         form_sale = 'Со скидкой!';
@@ -73,45 +73,77 @@ function form_submit(e) {
             if (xhr.readyState != 4) return;
 
             if (xhr.status === 200) {
-                ym(96749379,'reachGoal','zayvka')
-                document.querySelector('.modal .main-cont').style.display = 'none';
-                document.querySelector('.modal .success-cont').style.display = 'block';
+                ym(96749379, 'reachGoal', 'zayvka')
+                document.querySelector('.modal-def .main-cont').style.display = 'none';
+                document.querySelector('.modal-def .success-cont').style.display = 'block';
             }
         }
     }
 }
+
 function form_submit_quiz(e) {
     e.preventDefault();
-    var form_name, form_tel, form_type, form_sale;
-    form_name = document.getElementById('FormInputName').value;
-    form_tel = document.getElementById('FormInputTel').value;
-    form_type = document.getElementById('form').getAttribute('data-bs-whatever');
-    if(document.querySelector('.timer-cont').classList.contains('timer-done')) {
-        form_sale = 'Без скидки!';
-    } else {
-        form_sale = 'Со скидкой!';
+    var form_1, form_2, form_3, form_4, form_5, form_6, form_message;
+    form_1 = document.querySelector('input[name="quiz1"]:checked').value;
+    form_2 = document.querySelector('input[name="quiz2"]:checked').value;
+    form_3 = document.querySelector('#quiz3_text').value;
+    let quiztype = document.querySelector('input[name="quiz1"]:checked').getAttribute('id')
+    switch (quiztype) {
+        case 'quiz1_conf':
+            form_4 = document.querySelector('#quiz4_conf_text').value;
+            form_5 = document.querySelector('#quiz5_conf_text').value;
+            form_6 = document.querySelector('#quiz6_budget_text').value;
+            form_message = `Мероприятие: ${form_1}. \nКоличество гостей: ${form_2}. \nДата: ${form_3}. \nКоличество спикеров: ${form_4}. \nТайминг: ${form_5}. \nБюджет : ${form_6}. `
+            break;
+        case 'quiz1_team':
+            form_4 = document.querySelector('input[name="quiz4_team"]:checked').value;
+            form_5 = document.querySelector('#quiz5_budget_text').value;
+            form_message = `Мероприятие: ${form_1}. \nКоличество гостей: ${form_2}. \nДата: ${form_3}. \nФормат: ${form_4}. \nБюджет : ${form_5}. `
+            break;
+        case 'quiz1_mar':
+            form_4 = document.querySelector('input[name="quiz4_mar"]:checked').value;
+            form_5 = document.querySelector('#quiz5_budget_text').value;
+            form_message = `Мероприятие: ${form_1}. \nКоличество гостей: ${form_2}. \nДата: ${form_3}. \nВыездная церемония: ${form_4}. \nБюджет : ${form_5}. `
+            break;
+        case 'quiz1_birth':
+            form_4 = document.querySelector('#quiz4_birth_text').value;
+            form_5 = document.querySelector('#quiz5_budget_text').value;
+            form_message = `Мероприятие: ${form_1}. \nКоличество гостей: ${form_2}. \nДата: ${form_3}. \nДень рождения: ${form_4}. \nБюджет : ${form_5}. `
+            break;
+        case 'quiz1_corp':
+            form_4 = document.querySelector('#quiz4_name_text').value;
+            form_5 = document.querySelector('#quiz5_corp_text').value;
+            form_6 = document.querySelector('#quiz6_budget_text').value;
+            form_message = `Мероприятие: ${form_1}. \nКоличество гостей: ${form_2}. \nДата: ${form_3}. \nНазвание: ${form_4}. \nСобытие: ${form_5}. \nБюджет : ${form_6}. `
+            break;
+        case 'quiz1_pres':
+            form_4 = document.querySelector('#quiz4_name_text').value;
+            form_5 = document.querySelector('#quiz5_budget_text').value;
+            form_message = `Мероприятие: ${form_1}. \nКоличество гостей: ${form_2}. \nДата: ${form_3}. \nНазвание: ${form_4}. \nБюджет : ${form_5}. `
+            break;
+        case 'quiz1_grad':
+            form_4 = document.querySelector('#quiz4_name_text').value;
+            form_5 = document.querySelector('#quiz5_budget_text').value;
+            form_message = `Мероприятие: ${form_1}. \nКоличество гостей: ${form_2}. \nДата: ${form_3}. \nНазвание: ${form_4}. \nБюджет : ${form_5}. `
+            break;
     }
-    if (check(form_name, true) && check(form_tel.replace(/[^0-9]/g, ""), false)) {
-        form = new FormData();
-        xhr = new XMLHttpRequest();
-        form.append('form_name', form_name);
-        form.append('form_type', form_type);
-        form.append('form_tel', form_tel);
-        form.append('form_sale', form_sale);
+    form = new FormData();
+    xhr = new XMLHttpRequest();
+    form.append('form_message', form_message);
 
-        xhr.open('POST', 'form-handler.php');
-        xhr.send(form);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState != 4) return;
+    xhr.open('POST', 'form-handler-quiz.php');
+    xhr.send(form);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState != 4) return;
 
-            if (xhr.status === 200) {
-                ym(96749379,'reachGoal','zayvka')
-                document.querySelector('.modal .main-cont').style.display = 'none';
-                document.querySelector('.modal .success-cont').style.display = 'block';
-            }
+        if (xhr.status === 200) {
+            ym(96749379, 'reachGoal', 'zayvka')
+            document.querySelector('.modal-quiz .main-cont').style.display = 'none';
+            document.querySelector('.modal-quiz .success-cont').style.display = 'block';
         }
     }
 }
+
 function check(value, condition) {
     var result = false;
     if (condition) {

@@ -20,20 +20,15 @@ function ready(fn) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  $('#ModalQuiz').modal('show');
-
+  setTimeout(() => {
+    $('#ModalQuiz').modal('show');
+  }, 60000);
   var currentDate = new Date();
   var deadline = currentDate.setHours(currentDate.getHours() + 3);
   if (localStorage.getItem('deadline') === null) {
     localStorage.setItem('deadline', deadline);
   } else {
     deadline = localStorage.getItem('deadline')
-  }
-  if (localStorage.getItem('showmodal') === null) {
-    setTimeout(() => {
-      $('#Modal').modal('show');
-      localStorage.setItem('showmodal', 'true');
-    }, 60000);
   }
   // id таймера
   let timerId = null;
@@ -104,7 +99,6 @@ document.querySelectorAll('.quiz-cont').forEach(quiz => {
   quiz.querySelectorAll('input[type="radio"]').forEach(quizbtn => {
     quizbtn.addEventListener('change', function () {
       if (quizbtn.classList.contains('radio-else')) {
-        console.log(quizbtn.checked);
         if (quizbtn.checked) {
           if (quiz.querySelector('input[type="text"]').value != '') {
             quiz.querySelector('.quiz-next').disabled = false
@@ -112,6 +106,7 @@ document.querySelectorAll('.quiz-cont').forEach(quiz => {
             quiz.querySelector('.quiz-next').disabled = true
           }
           quiz.querySelector('input[type="text"]').addEventListener('input', function () {
+            quiz.querySelector('.radio-else').value = quiz.querySelector('input[type="text"]').value
             if (quiz.querySelector('input[type="text"]').value != '') {
               quiz.querySelector('.quiz-next').disabled = false
             } else {

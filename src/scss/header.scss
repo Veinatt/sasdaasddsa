@@ -202,6 +202,7 @@ header {
 
         .close-modal {
             z-index: 10;
+
             &::after {
                 content: url('data:image/svg+xml,<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.25 22.25L6.75 6.75" stroke="white" stroke-width="1.26811" stroke-linecap="round"/><path d="M22.25 6.75L6.75 22.25" stroke="white" stroke-width="1.26811" stroke-linecap="round"/></svg>');
                 height: 60px;
@@ -341,6 +342,7 @@ header {
                     line-height: 1em;
                 }
             }
+
             .quiz-cont:not(#quizcont1) {
                 position: absolute;
                 top: 0;
@@ -352,25 +354,32 @@ header {
                 pointer-events: none;
                 transition: all .3s ease-in-out;
             }
+
             .quiz-cont:not(#quizcont1).active {
                 opacity: 1;
                 pointer-events: all;
             }
+
             #quizcont2 {
                 z-index: 2;
             }
+
             #quizcont3 {
                 z-index: 3;
             }
+
             .quizcont4 {
                 z-index: 4;
             }
+
             .quizcont5 {
                 z-index: 5;
             }
+
             .quizcont6 {
                 z-index: 6;
             }
+
             .radio-cont {
                 display: block;
                 position: relative;
@@ -437,6 +446,7 @@ header {
                 border: 2px solid $clr-25white;
                 background-color: transparent;
                 color: $clr-gray;
+
                 &:active,
                 &:focus {
                     border: 2px solid $clr-gray;
@@ -446,13 +456,34 @@ header {
                     width: 100%;
                 }
             }
-            .ans-cont:has(.radio-else) input[type='text']{
+
+            input[type='date'] {
+                padding: 1em 1.25em;
+                border-radius: 2em;
+                border: 2px solid $clr-25white;
+                background-color: transparent;
+                color: $clr-gray;
+
+                &:active,
+                &:focus {
+                    border: 2px solid $clr-gray;
+                }
+
+                @media screen and (max-width:550px) {
+                    width: 100%;
+                }
+            }
+
+            .ans-cont:has(.radio-else) input[type='text'] {
                 display: none;
             }
-            .radio-cont:has(.radio-else:checked) ~ input[type="text"] {
+
+            .radio-cont:has(.radio-else:checked)~input[type="text"] {
                 display: block;
             }
-            .quiz-next, .quiz-prev {
+
+            .quiz-next,
+            .quiz-prev {
                 border: 1px solid $clr-gold;
                 padding: .5em 1.5em;
                 background-color: $clr-gold;
@@ -462,11 +493,13 @@ header {
                 position: relative;
                 overflow: hidden;
                 z-index: 2;
+
                 &:disabled {
                     opacity: .7;
                     pointer-events: none;
                 }
             }
+
             .quiz-btn-cont {
                 margin-top: 20px;
                 width: 100%;
@@ -476,4 +509,7 @@ header {
             }
         }
     }
+}
+.modal-quiz .sub-title {
+    max-width: calc(100% - 80px);
 }
