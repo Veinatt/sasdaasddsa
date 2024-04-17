@@ -594,6 +594,10 @@ header .mobile-header .links-cont .bottom-cont .sh-address {
   z-index: 6;
 }
 
+.modal .modal-content #formQuiz .quizcont7 {
+  z-index: 7;
+}
+
 .modal .modal-content #formQuiz .radio-cont {
   display: block;
   position: relative;

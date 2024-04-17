@@ -20,8 +20,8 @@ function ready(fn) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  // $('#ModalQuiz').modal('show');
   setTimeout(() => {
-    $('#ModalQuiz').modal('show');
   }, 60000);
   var currentDate = new Date();
   var deadline = currentDate.setHours(currentDate.getHours() + 3);
